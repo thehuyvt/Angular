@@ -1,7 +1,24 @@
 .box-shadow{
-    width: 300px;
-    height: 100px;
+    width: 500px;
+    height: auto;
     padding: 15px;
-    background-color: coral;
-    box-shadow: 10px 10px lightblue;
+    background-color: lightblue;
+    box-shadow: 10px 10px coral;
+}
+
+table, th, td {
+    border: 1px solid;
+    min-width: 100px;
+}
+
+.discount{
+    font-size: 14px;
+    color:#fff;
+    padding: 2px 4px;
+    background-color: red;
+    border-radius: 6px;
+}
+
+.center{
+    text-align: center;
 }

@@ -1,16 +1,25 @@
 <div class="box-shadow">
-    <h3>Đây là home Component nhé!</h3>
+    <h3>This is component Home:</h3>
+    <h2>List fruits:</h2>
     
-    <input type="text" [(ngModel)]="name">
-    <h3>Xin chào {{name}}.</h3>
-    <br/>
-    <button (click)="resetName()">Reset Name</button>
-    <h1>Lấy vợ được chưa?(Từ 20 tuổi trở lên)</h1>
-    @if(age >=20){
-        <h2>Bạn đã đủ tuổi lấy vợ</h2>
-    }
+    <ul *ngFor="let fruit of fruits; let i = index">
+        <li>{{i}} {{fruit}}</li>
+    </ul>
+    <br>
 
-    @if(age < 20){
-        <h2>Bạn đã chưa đủ tuổi lấy vợ</h2>
-    }
+    <table>
+        <tr>
+          <th>Number</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Discount</th>
+        </tr>
+        <tr class="center" *ngFor="let fruit of listFruits; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{fruit.name}}</td>
+          <td>{{fruit.price}}</td>
+          <td >
+            <span [ngClass] = "{'discount':fruit.discount > 0}">{{fruit.discount}}%</span></td>
+        </tr>
+      </table>
 </div>
