@@ -1,4 +1,16 @@
 <div class="box-shadow">
     <h3>Đây là home Component nhé!</h3>
+    
+    <input type="text" [(ngModel)]="name">
     <h3>Xin chào {{name}}.</h3>
+    <br/>
+    <button (click)="resetName()">Reset Name</button>
+    <h1>Lấy vợ được chưa?(Từ 20 tuổi trở lên)</h1>
+    @if(age >=20){
+        <h2>Bạn đã đủ tuổi lấy vợ</h2>
+    }
+
+    @if(age < 20){
+        <h2>Bạn đã chưa đủ tuổi lấy vợ</h2>
+    }
 </div>
