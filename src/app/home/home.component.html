@@ -7,7 +7,7 @@
     </ul>
     <br>
 
-    <table>
+    <!-- <table>
         <tr>
           <th>Number</th>
           <th>Name</th>
@@ -17,9 +17,20 @@
         <tr class="center" *ngFor="let fruit of listFruits; let i = index">
           <td>{{i+1}}</td>
           <td>{{fruit.name}}</td>
-          <td>{{fruit.price}}</td>
+          <td>{{fruit.price | currency: 'USD':'symbol':'1.2'}}</td>
           <td >
-            <span [ngClass] = "{'discount':fruit.discount > 0}">{{fruit.discount}}</span></td>
+            <span [ngClass] = "{'discount':fruit.discount > 0}">{{fruit.discount}}%</span></td>
         </tr>
-      </table>
+    </table> -->
+
+  <label for="">Choose your address:</label>
+
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let data of vietNamData" value={{data.city}}>{{data.city}}</option>
+  </select>
+
+  <select>
+    <option *ngFor="let district of districts, let i = index"  value={{district}}>{{district}}</option>
+  </select>
+
 </div>
