@@ -2,9 +2,10 @@
     <h3>This is component Home:</h3>
     <h2>List fruits:</h2>
     
-    <ul *ngFor="let fruit of fruits; let i = index">
-        <li>{{i}} {{fruit}}</li>
-    </ul>
+    <ol>
+        <li *ngFor="let fruit of fruits; let i = index"> {{fruit}}</li>
+    </ol>
+
     <br>
 
     <!-- <table>

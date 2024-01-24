@@ -112,12 +112,12 @@ public vietNamData=[
     console.log(this.vietNamData.find(data => data.city === event.target.value)?.district || []);
 
     //1st way
-    // const result = this.vietNamData.filter((data) => data.city === event.target.value);
-    // if(result.length > 0){
-    //   this.districts = result[0].district;
-    // }
+    const result = this.vietNamData.filter((data) => data.city === event.target.value);
+    if(result.length > 0){
+      this.districts = result[0].district;
+    }
 
     // 2nd way
-    this.districts = this.vietNamData.find(data => data.city === event.target.value)?.district || [];
+    //this.districts = this.vietNamData.find(data => data.city === event.target.value)?.district || [];
   }
 }
